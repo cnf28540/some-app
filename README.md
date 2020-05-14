@@ -1,2 +1,2 @@
 # some-app
-Some app
+This is a dummy app.
