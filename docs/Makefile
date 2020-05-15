@@ -1,0 +1,2 @@
+realmake:
+	doxygen doxygen.config
