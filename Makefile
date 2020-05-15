@@ -1,14 +1,5 @@
-CC=g++
-CCFLAGS=
-
-%.o : %.cpp
-	$(CC) $(CCFLAGS) -o $@ $^
-
-realmake: main.o
-
-clena: clean
-clean:
-	@-rm *.o
-	@-rm *~
-	@-rm core
-	clear
+realmake:
+	cd src; make
+	cd test; make
+	mv src/app bin
+	mv test/tester bin
