@@ -1,9 +1,10 @@
 CC=g++
 CCFLAGS=
-INCLUDES=
+INCLUDES=-I.
+LIBS=-L. -lgtest -lpthread
 
 %.o : %.cpp
-	$(CC) $(CCFLAGS) $(INCLUDES) -o $@ $^
+	$(CC) $(CCFLAGS) $(INCLUDES) -o $@ $^ $(LIBS)
 
 realmake: test.o
 	mv test.o tester
